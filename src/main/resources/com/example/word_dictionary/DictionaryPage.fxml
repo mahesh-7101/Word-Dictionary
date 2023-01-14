@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.word_dictionary.DictionaryPageController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView fitHeight="100" fitWidth="500" layoutX="50">
+            <image>
+                <Image url="@dictionary.jpeg"/>
+            </image>
+        </ImageView>
+        <Text layoutX="100" layoutY="100" text="Search a word">
+            <font>
+                <Font size="20"/>
+            </font>
+        </Text>
+        <TextField fx:id="search" layoutX="100" layoutY="120" minHeight="20" minWidth="100" promptText="Add a new word"></TextField>
+        <Button layoutX="300" layoutY="120" text="Search" onMouseClicked="#SearchButton"></Button>
+
+        <Text layoutX="100" layoutY="180">Add a new Word</Text>
+        <TextField fx:id="newword" layoutX="100" layoutY="200" minHeight="20" minWidth="100" promptText="Add a new word"></TextField>
+        <TextField fx:id="meaning" layoutX="100" layoutY="240" minHeight="20" minWidth="100" promptText="Add a new word"></TextField>
+        <Button layoutX="300" layoutY="240" text="Add" onMouseClicked="#Add"></Button>
+
+        <Text layoutX="100" layoutY="300">Find Meaning</Text>
+        <TextField fx:id="findword" layoutX="100" layoutY="320" minHeight="20" minWidth="100" promptText="Add a new word"></TextField>
+        <Button layoutX="300" layoutY="320" text="Find Meaning" onMouseClicked="#Meaning"></Button>
+    </children>
+</AnchorPane>
